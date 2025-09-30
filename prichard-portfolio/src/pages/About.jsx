@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="relative min-h-screen text-white px-6 py-12 flex flex-col items-center overflow-hidden">
+    <section className="relative min-h-screen text-white px-4 sm:px-6 md:px-12 py-12 flex flex-col items-center overflow-x-hidden">
       {/* Blurred background image */}
       <div
         className="absolute inset-0 z-0"
@@ -17,14 +17,14 @@ const About = () => {
 
       {/* Foreground content */}
       <div className="relative z-10 max-w-4xl text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-blue-400">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-blue-400">
           About Me
         </h2>
-        <p className="text-lg md:text-xl leading-relaxed mb-8">
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8">
           I'm <span className="font-semibold text-blue-300">Prichard Dube</span>, a fullstack web developer who thrives on building scalable, user-friendly applications. I specialize in crafting seamless digital experiences that combine clean design, robust backend logic, and responsive frontend interfaces.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           <div>
             <h3 className="text-xl font-bold text-blue-300 mb-2">💻 What I Do</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-300">

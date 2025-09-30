@@ -8,10 +8,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_iev2ltd',     // Replace with your actual EmailJS service ID
-      'template_cp18s1g',    // Replace with your actual EmailJS template ID
+      'service_iev2ltd',
+      'template_cp18s1g',
       form.current,
-      'YndUHL_pJ5_0fSPCm'      // Replace with your EmailJS public key
+      'YndUHL_pJ5_0fSPCm'
     ).then(
       () => alert('✅ Message sent successfully!'),
       (error) => alert('❌ Failed to send message: ' + error.text)
@@ -21,17 +21,25 @@ const Contact = () => {
   };
 
   return (
-    <section
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat text-white px-6 py-12 flex flex-col items-center"
-      style={{ backgroundImage: "url('/assets/wallpaper.jpeg')" }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+    <section className="relative min-h-screen text-white px-4 sm:px-6 md:px-12 py-12 flex flex-col items-center overflow-x-hidden">
+      {/* Blurred background image */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/assets/wallpaper.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          filter: "blur(8px) brightness(0.5)"
+        }}
+      ></div>
 
+      {/* Foreground content */}
       <div className="relative z-10 max-w-2xl w-full text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-blue-400">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-blue-400">
           Contact Me
         </h2>
-        <p className="text-lg md:text-xl mb-8 text-purple-300">
+        <p className="text-base sm:text-lg md:text-xl mb-8 text-purple-300">
           Whether you’re looking to collaborate, hire, or just say hello—I'd love to hear from you.
         </p>
 
